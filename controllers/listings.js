@@ -2,7 +2,7 @@ const { query } = require("express");
 const Listing = require ("../models/listing");
 const mbxGeocoding = require("@mapbox/mapbox-sdk/services/geocoding")
 const mapToken = process.env.MAP_TOKEN ;
-const geocodingClint = mbxGeocoding({ asscessToken: mapToken });
+const geocodingClint = mbxGeocoding({ accessToken: mapToken });
 
 module.exports.index = async(req,res)=>{
     const allListing = await Listing.find({});
