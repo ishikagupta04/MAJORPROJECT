@@ -1,5 +1,5 @@
 
-let mapToken = mapToken;
+mapboxgl.accessToken = mapToken;
 
 const map = new mapboxgl.Map({
     container: 'map', // container ID
@@ -7,7 +7,6 @@ const map = new mapboxgl.Map({
     style: 'mapbox://styles/mapbox/satellite-streets-v12', // style URL
     center: listing.geometry.coordinaties, //starting position [lng, lat]
     zoom: 9 // starting zoom
-
 });
    
 // Create a default Marker and add it to the map.
